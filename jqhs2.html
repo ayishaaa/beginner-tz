@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body{
+            background-color: #5f6e6b56;
+            display: grid;
+            /* height: 100vh; */
+        }
+        .main{
+            width: 250px;
+            height: 470px;
+            margin-left: 80px;
+            margin-top: 80px;
+            padding-bottom: 20px;
+            /* padding-left:0px;
+            padding-top:50px;
+            padding-right: 10px; */
+            justify-content: center;
+            align-items:center;     
+            background-color: rgb(209, 127, 127);
+            border: 10px solid rgb(96, 71, 71);
+            border-radius: 12%;
+            float:left;
+        }
+        
+        .txt{
+            color: rgb(94, 24, 32);
+            text-align: center;
+            font-size: xx-large;
+        }
+        .gap{
+            width: 1500px;
+        }
+        p{
+            text-align: justify;
+            margin-left: 10px;
+            margin-right: 10px;
+        }
+        .btn{
+            background-color: rgba(139, 93, 93, 0.767);
+            margin-left: 70px;
+            margin-bottom: 10px;
+            justify-content: flex-end;
+            width: 100px;
+            height: 30px;
+            border-radius: 30%;
+            
+        }
+        #main0 {
+			height: 470px;
+			/* overflow: hidden; */
+			transition: height 0.5s ease;
+		}
+
+        #main0 .main{
+			display: none;
+			width: 100%;
+			height: auto;
+		}
+
+        #main0 .main11,
+        #main0 .main21 {
+        display: none;
+        }
+
+        #main0.active .main01 {
+			display: none;
+		}
+
+		#main0.active .main11 {
+			display: block;
+		}
+
+        
+        #main0.active .main21 {
+            display: block;
+        }
+        </style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+<script>
+    
+    $(document).ready(function() {
+        $('#hide0').click(function() {
+            
+            if(
+                $('.main01').hasClass('active')
+            ){
+                
+                $('.main01').removeClass('active') ;
+                $('.main01').fadeOut(1000); 
+                $('.main11').fadeIn(1000);
+                $('.main11').addClass('active') ;
+            
+            }
+            else if(
+                $('.main11').hasClass('active')
+            ){
+                $('.main11').removeClass('active') ;
+                $('.main11').hide(1000); 
+                $('.main21').show(1000);
+                $('.main21').addClass('active') ;
+            
+            }
+            else if(
+                $('.main21').hasClass('active')
+            ){
+                $('.main21').removeClass('active') ;
+                $('.main21').hide(1000); 
+                $('.main01').show(1000);
+                $('.main01').addClass('active') ;
+            
+            }
+
+
+
+    
+        });
+    });
+
+
+</script>
+</head>
+<body>
+    <div class="gap" >
+        <div class="main" id="main0">
+            <div class="main01 active">
+                <div class="img">
+                    <img src="https://images.pexels.com/photos/2071873/pexels-photo-2071873.jpeg?auto=compress&cs=tinysrgb&w=600" height="180px" width="230px" style="align-items: center;margin-left: 10px;padding-top: 9;border-radius: 25%;">
+                </div>
+                <div class="txt">
+                    Cats
+                </div>
+                <p id="container">The cat is similar in anatomy to the other felid species: it has a strong flexible body, quick reflexes, sharp teeth, and retractable claws adapted to killing small prey like mice and rats. Its night vision and sense of smell are well developed.</p>
+                
+                <!-- <button class="btn" id="show0">Show</button> -->
+            </div>
+    
+            <div class="main11">
+                <div class="img">
+                    <img src="https://images.pexels.com/photos/3361722/pexels-photo-3361722.jpeg?auto=compress&cs=tinysrgb&w=600" height="180px" width="230px" style="align-items: center;margin-left: 10px;padding-top: 9;border-radius: 25%;">
+                </div>
+                <div class="txt">
+                    Dogs 
+                </div>
+                <p  id="container1">A dog is a domestic mammal of the family Canidae and the order Carnivora. Its scientific name is Canis lupus familiaris. Dogs are a subspecies of the gray wolf, and they are also related to foxes and jackals</p>
+                
+                <!-- <button class="btn" id="show1">Show</button> -->
+            </div>
+
+            <div class="main21">
+                <div class="img">
+                    <img src="https://i.pinimg.com/564x/33/0d/95/330d95c5978a3372a1008796fb12afc4.jpg" height="180px" width="230px" style="align-items: center;margin-left: 10px;padding-top: 9;border-radius: 25%;">
+                </div>
+                <div class="txt">
+                    Parrots 
+                </div>
+                <p  id="container2">Parrots have been kept as cage birds since ancient times, and they have always been popular because they are amusing, intelligent, and often affectionate. Several are astonishingly imitative of many sounds, including human speech.</p>
+                
+            </div>
+
+            
+            <button class="btn" id="hide0">Toggle</button>
+        
+    </div>
+   
+
+</body>
+</html>

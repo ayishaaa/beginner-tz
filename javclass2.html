@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h1>JavaScript Classes</h1>
+<p>Sorted Names:</p>
+
+<ul id="namesList"></ul>
+
+<button id="btn">Display Names</button>
+
+<script>
+    class Name {
+        constructor(firstName) {
+            this.firstName = firstName;
+        }
+
+        displayDetails() {
+            const namesList = document.getElementById("namesList");
+            const li = document.createElement("li");
+            li.appendChild(document.createTextNode(this.firstName));
+            namesList.appendChild(li);
+        }
+        
+        static sort(namesArray){
+            namesArray.sort((a, b) => {
+                const nameA = a.firstName.toUpperCase();
+                const nameB = b.firstName.toUpperCase(); 
+                if (nameA < nameB) {
+                    return -1;
+                }
+                if (nameA > nameB) {
+                    return 1;
+                }
+                
+                return 0;
+            }); 
+        }
+    }
+
+    const jsonString = '[{"firstName": "Fairoosa"}, {"firstName": "Fidha"}, {"firstName": "Ayisha"}, {"firstName": "Nihala"}, {"firstName": "Heza"}]';
+
+    const namesArray = JSON.parse(jsonString);
+
+    Name.sort(namesArray);
+
+    const btn = document.getElementById("btn");
+
+    btn.addEventListener("click", () => {
+        namesArray.forEach((item) => {
+            const name = new Name(item.firstName);
+            name.displayDetails();
+        });
+    });
+</script>
+
+</body>
+</html>

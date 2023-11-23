@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h1>JavaScript Classes</h1>
+<p>Enter Your Name:</p>
+
+<p id="demo"></p>
+
+<script>
+    class Name {
+    constructor(fname, lname) {
+        this.fname = fname;
+        this.lname = lname;
+    }
+    }
+
+    const Name1 = new Name("Ayisha", "Nihala");
+    const Name2 = new Name("Fidha", "Fairoosa");
+
+    document.getElementById("demo").innerHTML =
+    Name1.fname + " " + Name2.lname;
+</script>
+
+</body>
+</html>

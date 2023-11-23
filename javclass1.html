@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h1>JavaScript Classes</h1>
+<p>Enter Your Name:</p>
+
+<p id="demo"></p>
+
+<button id="btn">Display Name</button>
+
+<script>
+    class Name {
+        constructor(jsonString) {
+            const nameObj = JSON.parse(jsonString);
+            this.fname = nameObj.firstName;
+            this.lname = nameObj.lastName;
+        }
+
+        displayDetails() {
+            const demo = document.getElementById("demo");
+            demo.innerHTML = this.fname + " " + this.lname;
+        }
+    }
+
+    const jsonString = '{ "firstName": "Ayisha", "lastName": "Nihala" }';
+
+    const name = new Name(jsonString);
+
+    const btn = document.getElementById("btn");
+
+    btn.addEventListener("click", () => {
+        name.displayDetails();
+    });
+</script>
+
+</body>
+</html>

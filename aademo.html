@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Change background color and image on click</title>
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<style>
+		#element {
+			height: 0;
+			/* overflow: hidden; */
+			transition: height 0.5s ease;
+		}
+
+		/* #element.active {
+			height: 200px;
+		} */
+
+		#element img {
+			display: none;
+			width: 100%;
+			height: auto;
+		}
+
+		#element.active .first-img {
+			display: none;
+		}
+
+		#element.active .second-img {
+			display: block;
+		}
+	</style>
+</head>
+<body>
+	<button id="toggle-btn">Toggle</button>
+	<div id="element">
+		<img class="first-img" src="https://i.pinimg.com/564x/6b/76/e9/6b76e975f28c3cb258411e3d8c41fb90.jpg">
+		<img class="second-img" src="https://images.pexels.com/photos/2071873/pexels-photo-2071873.jpeg?auto=compress&cs=tinysrgb&w=600">
+	</div>
+
+	<script>
+		$(document).ready(function() {
+			$('#toggle-btn').click(function() {
+				$('#element').toggleClass('active');
+				$('#element .first-img').toggle(1000);
+				$('#element .second-img').toggle(1000);
+			});
+		});
+	</script>
+</body>
+</html>

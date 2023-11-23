@@ -1,0 +1,85 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    font-family: 'poppins', sans-serif;
+}
+body{
+    background-color: #442d65a4;
+  
+  
+    
+}
+.gap{
+    /* width: 1500px; */
+    width: 800px;
+    height: 850px;
+    padding: 0px;
+    margin-left:350px;
+    margin-top: 0px;
+    margin-right: 500px;
+    background-color: #c1652300;
+    position: absolute;
+    /* border: 6px solid rgb(142, 92, 92); */
+    border-radius: 10px; 
+}
+.main{
+    width: 700px;
+    height: 175px;
+    padding: 10px;
+    margin-left:50px;
+    margin-top: 20px;
+    margin-right: 200px;
+    background-color: rgba(224, 141, 175, 0.826);
+    position: absolute;
+    /* border: 6px solid rgb(142, 92, 92); */
+    border-radius: 10px; 
+}
+.main1{
+    width: 700px;
+    height: 550px;
+    padding: 10px;
+    margin-left:50px;
+    margin-top: 235px;
+    margin-right: 200px;
+    background-color: rgba(194, 164, 236, 0.679);
+    position: absolute;
+    /* border: 6px solid rgb(142, 92, 92); */
+    border-radius: 10px; 
+}
+.main11{
+    width: 600px;
+    height: 20px;
+    padding: 10px;
+    margin-left:50px;
+    margin-top: 25px;
+    margin-right: 200px;
+    background-color: rgba(211, 192, 237, 0.827);
+    position: absolute;
+    /* border: 6px solid rgb(142, 92, 92); */
+    border-radius: 10px; 
+}
+.lab{
+    margin-top: 50;
+    
+    color: #933d8bbc;
+    text-align: right ;
+}
+
+.div {
+    background-color: lightgrey;
+    border-radius: 30px;
+    height:30px;
+    width: 300px;
+    border: 1px solid rgb(226, 155, 150);
+
+    margin-right:0 px;
+}
+
+.txt{
+    text-decoration: none;
+}
+img{
+    width: 300px;
+    height: 150px;
+    border-radius: 15px;
+}
